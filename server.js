@@ -4,11 +4,12 @@ const path = require("path");
 const app = express();
 
 // Middleware to serve static files (React frontend)
-app.use(express.static(path.join(__dirname, "client", "build")));
+//app.use(express.static(path.join(__dirname, "client/build")));
 
 // Handle all routes and return index.html (React will handle routing)
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+//  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
 
 // Define a simple API route
